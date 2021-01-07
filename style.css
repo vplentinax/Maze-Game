@@ -1,0 +1,121 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Kufam", cursive;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(
+    to right bottom,
+    #d16ba5,
+    #c572b6,
+    #b67ac5,
+    #a483d1,
+    #8e8bda,
+    #7594e1,
+    #5a9de4,
+    #3ba4e3,
+    #00aede,
+    #00b6d5,
+    #17bdc8,
+    #43c2ba
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.animation-wrapper {
+  width: 600px;
+  height: 600px;
+  box-shadow: 1px 0px 21px -1px rgba(0, 0, 0, 0.76);
+}
+
+.message-one,
+.message-two {
+  width: 550px;
+  height: 550px;
+  position: absolute;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.text {
+  font-size: 30px;
+  text-align: center;
+}
+
+.start,
+.restart {
+  width: max-content;
+  outline: none;
+  border: none;
+  background-image: linear-gradient(
+    to right bottom,
+    #d16ba5,
+    #c572b6,
+    #b67ac5,
+    #a483d1,
+    #8e8bda,
+    #7594e1,
+    #5a9de4,
+    #3ba4e3,
+    #00aede,
+    #00b6d5,
+    #17bdc8,
+    #43c2ba
+  );
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  margin-top: 25px;
+  font-size: 30px;
+  transition: 0.2s all ease;
+}
+
+.start:active {
+  transform: scale(0.8);
+}
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: flex;
+}
+
+@media only screen and (max-width: 460px) {
+  .animation-wrapper {
+    width: 80%;
+    height: 40%;
+  }
+
+  .message-one,
+  .messate-two {
+    width: 70%;
+    height: 30%;
+  }
+
+  .start,
+  .restart,
+  .text {
+    font-size: 20px;
+  }
+}
